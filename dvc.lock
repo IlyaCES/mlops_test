@@ -20,16 +20,22 @@ train:
   - path: dataset/data_train.csv
     md5: e9fcc1d7c50bdce117e1f889d488e865
     size: 14799804
+  - path: pipeline/train.py
+    md5: 3f3ebab2d12ce77af037263a542ac6ca
+    size: 266
 val:
   cmd: python pipeline/val.py
   deps:
   - path: dataset/data_test.csv
     md5: 70307ce3736cc324d5731fbd898d5c73
     size: 4933214
+  - path: pipeline/val.py
+    md5: fbab6474bfe8c87f4ffced8f07e966c3
+    size: 726
   outs:
   - path: model/confusion_matrix.png
-    md5: b627443fce163d50b4b64c682064d215
-    size: 33357
+    md5: c5c5b58dc9907ce68602c11cdf3b3c46
+    size: 33546
   - path: model/metrics.json
-    md5: 5c0d0843d6bb5d813ab0a3d7ddf0efcd
+    md5: 3364f137495352b3001d02c92f3ecdbb
     size: 53
